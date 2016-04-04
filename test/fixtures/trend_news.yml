@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Idx: 1
+  Title: MyString
+  Url: MyString
+  Source: MyString
+  Description: MyString
+  Name: MyString
+  Date: 2016-04-01 21:54:14
+
+two:
+  Idx: 1
+  Title: MyString
+  Url: MyString
+  Source: MyString
+  Description: MyString
+  Name: MyString
+  Date: 2016-04-01 21:54:14

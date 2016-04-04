@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="Newstter" name="description" />
+  <title>Newstter</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <%= render 'layouts/favicon' %>
+</head>
+<body>
+<%= render 'layouts/header' %>
+<%= render 'layouts/jumbotron' %>
+<section class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <%= yield %>
+    </div>
+ </div>
+</section>
+<%= render 'layouts/footer' %>
+</body>
+</html>

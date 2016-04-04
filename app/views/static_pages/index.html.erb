@@ -1,0 +1,8 @@
+<% if @trends_news.any? %>
+  <div class="trends_news_time">
+    最終更新：<%= time_ago_in_words(@trends_news.first[:Time]) %>前
+  </div>
+  <ol class="trends_news">
+    <%= render @trends_news %>
+  </ol>
+<% end %>
