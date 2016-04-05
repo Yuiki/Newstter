@@ -12,6 +12,7 @@ gem 'searchbing'
 gem 'twitter'
 gem 'whenever'
 gem 'unicorn'
+gem 'google-analytics-rails'
 
 group :development, :test do
   gem 'byebug'

@@ -80,4 +80,6 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.exceptions_app = -> (env) { ErrorsController.action(:show).call(env) }
+
+  GA.tracker = "UA-52710519-8"
 end

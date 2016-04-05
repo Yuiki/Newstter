@@ -14,7 +14,7 @@ class Tasks::AddData
 
   def self.execute
     Rails.logger.debug("ADD DATA EXECUTE")
-    trends_news = get
+    trends_news = get[0..6]
     time = Time.zone.now
     trends_news.each do |trend_news|
         TrendNews.create(Title: trend_news[:Title],
@@ -23,7 +23,7 @@ class Tasks::AddData
                          Description: trend_news[:Description],
                          Name: trend_news[:Name],
                          Date: trend_news[:Date],
-                         Time: time)
+                         Time: time) if (trend_news[:Date] > 2.days.ago || (trend_news[:Description]).include?(time.strftime("%m月%d日")))
     end
   end
 

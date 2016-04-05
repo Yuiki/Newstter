@@ -22,6 +22,6 @@
 set :output, 'log/crontab.log'
 set :environment, :production
 
-every 10.minutes do
+every 1.hours do
     runner "Tasks::AddData.execute"
 end
