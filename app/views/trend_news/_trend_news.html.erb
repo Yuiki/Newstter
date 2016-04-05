@@ -1,6 +1,6 @@
 <li id="trend_news-<%= trend_news.id %>">
   <span class="item-header">
-    <%= link_to trend_news.Name, "http://twitter.com/search?q=#{trend_news.Name}&src=tren", target: "_blank" %>
+    <%= link_to trend_news.Name, "http://twitter.com/search?q=#{URI.encode(trend_news.Name)}&src=tren", target: "_blank" %>
   </span>
   <a href="<%= trend_news.Url %>" target="_blank" class="link_box">
     <span class="item_title">
