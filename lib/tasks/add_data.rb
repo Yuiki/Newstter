@@ -14,7 +14,7 @@ class Tasks::AddData
 
   def self.execute
     Rails.logger.debug("ADD DATA EXECUTE")
-    trends_news = get[0..6]
+    trends_news = get
     time = Time.zone.now
     trends_news.each do |trend_news|
         TrendNews.create(Title: trend_news[:Title],
@@ -29,7 +29,7 @@ class Tasks::AddData
 
   def self.get
     trends_news = []
-    getTrends.each do |trend|
+    (getTrends[0..6]).each do |trend|
       result = search(trend)
       if result.present? then
         trend_news = { Title: result[:Title],
