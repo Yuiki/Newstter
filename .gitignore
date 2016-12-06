@@ -29,4 +29,4 @@ doc/
 .DS_Store
 .idea
 .secret
-/public/assets/bootstrap/
+/public/assets/
